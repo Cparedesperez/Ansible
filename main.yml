@@ -1,0 +1,10 @@
+---
+
+- hosts: webservers
+  become: true
+  roles:
+   - role: crear_user
+  #- role: permitir_puertos
+  #- role: nginx_install
+  #- role: variable_template
+  #- role: bucle_template

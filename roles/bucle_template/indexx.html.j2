@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<body>
+<h1>Hola Mundo</h1>
+<h2>Hello,Nginx from {{ inventory_hostname }} our varieable is: {{ variable }} </h2>
+<p> The servers inside group webservers are {% for host in groups ['webservers'] %}{{ hostvars[host]['ansible_hostname'] }}{% if not loop.last %},{% endif %} {% endfor %}
+</p>
+<body>
+</html>
+
+

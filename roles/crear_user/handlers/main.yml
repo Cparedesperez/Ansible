@@ -1,0 +1,7 @@
+---
+# handlers file for crear_user
+
+- name: does not expires
+  command: "change -m -1 -M -1 -W -1 -E -1 {{ ansible_local_user }}"
+
+

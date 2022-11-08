@@ -1,0 +1,12 @@
+---
+
+- name: copy nginx template
+  template:
+    src: ../index.html.j2
+    dest: /usr/share/nginx/html/index.html
+
+- name: recargar nginx
+  systemd: 
+    name: nginx
+    state: restarted
+

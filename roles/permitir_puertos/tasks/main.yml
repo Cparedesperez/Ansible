@@ -1,0 +1,17 @@
+---
+
+- name: permitir puerto
+  ansible.posix.firewalld:
+    zone: public
+    port: 80/tcp
+    permanent: yes
+    immediate: true
+    state: enabled
+
+- name: permitir puertos
+  ansible.posix.firewalld:
+    zone: public
+    port: 80/tcp
+    permanent: yes
+    immediate: true
+    state: enabled 
